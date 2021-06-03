@@ -1,0 +1,29 @@
+{
+  "name": "react-native-safe-style",
+  "version": "0.0.1",
+  "description": "\"# react-native-safe-style\"",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dested/react-native-safe-style.git"
+  },
+  "author": "destegd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dested/react-native-safe-style/issues"
+  },
+  "homepage": "https://github.com/dested/react-native-safe-style#readme",
+  "devDependencies": {
+    "@types/react": "17.0.9",
+    "@types/react-native": "0.64.10",
+    "prettier": "^2.3.0",
+    "typescript": "^4.3.2"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  }
+}
