@@ -27,7 +27,7 @@ export type SafeStyleSchema<
   colors: {[key in TColors]: string};
   spacing: {[key in TSpacing]: number | string};
   borderRadii: {[key in TBorderRadii]: number};
-  defaultClasses: {text?: TBaseClassesKeys; view?: TBaseClassesKeys};
+  defaultClasses: {text?: TBaseClassesKeys[]; view?: TBaseClassesKeys[]};
   baseClasses: {
     [className in TBaseClassesKeys]: AllProps<TColors, TSpacing, TBorderRadii>;
   };

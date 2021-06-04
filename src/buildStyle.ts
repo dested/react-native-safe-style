@@ -220,7 +220,7 @@ export function useSafeStyle<
       text: function (classes: (TTextsKeys | TBaseClassesKeys | ClassKey)[], debugStyle?: boolean): TextStyle {
         return processStyle(
           theme,
-          theme.defaultClasses.text ? [theme.defaultClasses.text, ...classes] : classes,
+          theme.defaultClasses.text ? [...theme.defaultClasses.text, ...classes] : classes,
           tClassCache,
           tStyleCache,
           !!debugStyle
