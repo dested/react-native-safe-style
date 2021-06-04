@@ -29,7 +29,7 @@ With yarn:
 $ yarn add react-native-safe-schema
 ```
 
-## Usage
+## Example
 
 ```tsx
 <SView bigCard fullWidth={someCondition}>
@@ -37,7 +37,7 @@ $ yarn add react-native-safe-schema
 </SView>
 ```
 
-## Basic Usage
+## Usage
 
 ### Define your theme
 
