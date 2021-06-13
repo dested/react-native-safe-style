@@ -132,7 +132,7 @@ export const SafeStyleTheme = startTheme({
     // the second parameter is text classes
     {
       boldButton: ['sizeBase', 'fColDark', 'fSBold', 'textCenter', {padding: 's', marginVertical: 's'}],
-      h1: ['size3xk', 'fColDark', 'fSBold'],
+      h1: ['size3xl', 'fColDark', 'fSBold'],
     }
   );
 ```
@@ -159,6 +159,9 @@ export const SReanimatedView = makeView(SafeStyleTheme, Reanimated.View);
 
 /// etc
 ```
+
+    <SafeStyleProvider theme={SafeStyleTheme}>
+
 
 ### Use your components
 

@@ -14,7 +14,8 @@ export declare function startTheme<TColors extends string, TSpacing extends stri
 }): {
     addBaseClasses: <TBaseClassesKeys extends string>(baseClasses: { [className in TBaseClassesKeys]: AllProps<TColors, TSpacing, TBorderRadii>; }) => {
         addDefaultClasses: (defaultClasses: {
-            text?: TBaseClassesKeys | undefined;
+            text?: TBaseClassesKeys[] | undefined;
+            view?: TBaseClassesKeys[] | undefined;
         }) => {
             addClasses: <TViewsKeys extends string, TTextsKeys extends string>(views: { [className_1 in TViewsKeys]: StyleStructure<TColors, TSpacing, TBorderRadii, TBaseClassesKeys>; }, texts: { [className_2 in TTextsKeys]: StyleStructure<TColors, TSpacing, TBorderRadii, TBaseClassesKeys>; }) => SafeStyleSchema<TColors, TSpacing, TBorderRadii, TBaseClassesKeys, TViewsKeys, TTextsKeys>;
         };

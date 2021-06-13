@@ -1,7 +1,7 @@
 import { ComponentType, ReactNode } from 'react';
 import React from 'react';
 import { SafeStyleSchema } from './index';
-export declare function makeView<T, TColors extends string, TSpacing extends string, TBorderRadii extends string, TBaseClassesKeys extends string, TViewsKeys extends string, TTextsKeys extends string>(theme: SafeStyleSchema<TColors, TSpacing, TBorderRadii, TBaseClassesKeys, TViewsKeys, TTextsKeys>, Comp: ComponentType<T>): React.MemoExoticComponent<React.ForwardRefExoticComponent<React.PropsWithoutRef<(T | (T & {
+export declare function makeView<T, TColors extends string, TSpacing extends string, TBorderRadii extends string, TBaseClassesKeys extends string, TViewsKeys extends string, TTextsKeys extends string>(theme: SafeStyleSchema<TColors, TSpacing, TBorderRadii, TBaseClassesKeys, TViewsKeys, TTextsKeys>, Comp: ComponentType<T>): React.ForwardRefExoticComponent<React.PropsWithoutRef<(T | (T & {
     children?: ReactNode;
 })) & { [key in TBaseClassesKeys | TViewsKeys]?: boolean | undefined; } & {
     backgroundColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
@@ -109,10 +109,8 @@ export declare function makeView<T, TColors extends string, TSpacing extends str
     translateY?: number | undefined;
 } & {
     debugStyle?: boolean | undefined;
-}> & React.RefAttributes<ComponentType<T>>>>;
-export declare function makeText<T, TColors extends string, TSpacing extends string, TBorderRadii extends string, TBaseClassesKeys extends string, TViewsKeys extends string, TTextsKeys extends string>(theme: SafeStyleSchema<TColors, TSpacing, TBorderRadii, TBaseClassesKeys, TViewsKeys, TTextsKeys>, Comp: ComponentType<T>): React.ForwardRefExoticComponent<React.PropsWithoutRef<{
-    children?: ReactNode;
-} & (T | (T & {
+}> & React.RefAttributes<ComponentType<T>>>;
+export declare function makeText<T, TColors extends string, TSpacing extends string, TBorderRadii extends string, TBaseClassesKeys extends string, TViewsKeys extends string, TTextsKeys extends string>(theme: SafeStyleSchema<TColors, TSpacing, TBorderRadii, TBaseClassesKeys, TViewsKeys, TTextsKeys>, Comp: ComponentType<T>): React.ForwardRefExoticComponent<React.PropsWithoutRef<(T | (T & {
     children?: ReactNode;
 })) & { [key in TBaseClassesKeys | TTextsKeys]?: boolean | undefined; } & {
     backgroundColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
@@ -220,4 +218,4 @@ export declare function makeText<T, TColors extends string, TSpacing extends str
     translateY?: number | undefined;
 } & {
     debugStyle?: boolean | undefined;
-}> & React.RefAttributes<T>>;
+}> & React.RefAttributes<ComponentType<T>>>;

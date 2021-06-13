@@ -166,7 +166,7 @@ function useSafeStyle(theme) {
             return processStyle(theme, classes, vClassCache, vStyleCache, !!debugStyle);
         },
         text: function (classes, debugStyle) {
-            return processStyle(theme, theme.defaultClasses.text ? __spreadArray([theme.defaultClasses.text], classes) : classes, tClassCache, tStyleCache, !!debugStyle);
+            return processStyle(theme, theme.defaultClasses.text ? __spreadArray(__spreadArray([], theme.defaultClasses.text), classes) : classes, tClassCache, tStyleCache, !!debugStyle);
         },
         color: function (color) {
             return theme.colors[color];

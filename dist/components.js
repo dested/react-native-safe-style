@@ -42,12 +42,11 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.makeText = exports.makeView = void 0;
-var react_1 = require("react");
-var react_2 = __importStar(require("react"));
+var react_1 = __importStar(require("react"));
 var index_1 = require("./index");
 function makeView(theme, Comp) {
     var _a;
-    var forwardRefExoticComponent = react_1.memo(react_2.forwardRef(function (_a, ref) {
+    var forwardRefExoticComponent = react_1.forwardRef(function (_a, ref) {
         var children = _a.children, rest = __rest(_a, ["children"]);
         var view = index_1.useSafeStyle(theme).view;
         var _b = index_1.extractSafeStyleProps(theme, rest, 'view'), newProps = _b.newProps, keys = _b.keys;
@@ -57,15 +56,15 @@ function makeView(theme, Comp) {
             console.log('TRIGGER');
         }
         var FinalComp = Comp; // todo i cannot fix this
-        return (react_2.default.createElement(FinalComp, __assign({ ref: ref }, newProps, { style: 'style' in newProps ? [newProps['style'], viewStyle] : viewStyle }), children));
-    }));
+        return (react_1.default.createElement(FinalComp, __assign({ ref: ref }, newProps, { style: 'style' in newProps ? [newProps['style'], viewStyle] : viewStyle }), children));
+    });
     forwardRefExoticComponent.displayName = "SafeStyle." + ((_a = Comp === null || Comp === void 0 ? void 0 : Comp.displayName) !== null && _a !== void 0 ? _a : 'NoNameComponent');
     return forwardRefExoticComponent;
 }
 exports.makeView = makeView;
 function makeText(theme, Comp) {
     var _a;
-    var forwardRefExoticComponent = react_2.forwardRef(function (_a, ref) {
+    var forwardRefExoticComponent = react_1.forwardRef(function (_a, ref) {
         var children = _a.children, rest = __rest(_a, ["children"]);
         var text = index_1.useSafeStyle(theme).text;
         var _b = index_1.extractSafeStyleProps(theme, rest, 'text'), newProps = _b.newProps, keys = _b.keys;
@@ -74,7 +73,7 @@ function makeText(theme, Comp) {
             console.log(keys, newProps, textStyle);
         }
         var FinalComp = Comp; // todo i cannot fix this
-        return (react_2.default.createElement(FinalComp, __assign({ ref: ref }, newProps, { style: 'style' in newProps ? [newProps['style'], textStyle] : textStyle }), children));
+        return (react_1.default.createElement(FinalComp, __assign({ ref: ref }, newProps, { style: 'style' in newProps ? [newProps['style'], textStyle] : textStyle }), children));
     });
     forwardRefExoticComponent.displayName = "SafeStyle." + ((_a = Comp === null || Comp === void 0 ? void 0 : Comp.displayName) !== null && _a !== void 0 ? _a : 'NoNameComponent');
     return forwardRefExoticComponent;

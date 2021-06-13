@@ -22,8 +22,8 @@ export declare type SafeStyleSchema<TColors extends string, TSpacing extends str
         [key in TBorderRadii]: number;
     };
     defaultClasses: {
-        text?: TBaseClassesKeys;
-        view?: TBaseClassesKeys;
+        text?: TBaseClassesKeys[];
+        view?: TBaseClassesKeys[];
     };
     baseClasses: {
         [className in TBaseClassesKeys]: AllProps<TColors, TSpacing, TBorderRadii>;

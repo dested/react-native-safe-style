@@ -1,4 +1,4 @@
-import {TransformsStyle, FlexStyle, TextStyle, ViewStyle} from 'react-native';
+import {TransformsStyle, FlexStyle, TextStyle, ViewStyle, StyleProp} from 'react-native';
 import {useEffect} from 'react';
 import {allProperties, AllProps, transformKeys, transformProperty, transformPropertyKey} from './styleProps';
 import {fromEntries, safeEntries} from './utils';
@@ -16,7 +16,7 @@ export function startTheme<TColors extends string, TSpacing extends string, TBor
       }
     ) => {
       return {
-        addDefaultClasses: (defaultClasses: {text?: TBaseClassesKeys}) => {
+        addDefaultClasses: (defaultClasses: {text?: TBaseClassesKeys[]; view?: TBaseClassesKeys[]}) => {
           return {
             addClasses: <TViewsKeys extends string, TTextsKeys extends string>(
               views: {
@@ -396,7 +396,8 @@ export function makeUseBespokeStyle<
     return safeEntries(classes).reduce((accumulator, currentValue) => {
       const classes = Array.isArray(currentValue[1]) ? currentValue[1] : [currentValue[1]];
       let classMap = mergeArrayObjects(classes.map((e) => (typeof e === 'string' ? {[e as TBespokeStyles]: true} : e)));
-      accumulator[currentValue[0]] = classMap!;
+      accumulator[currentValue[0]] = classMap as ({[e in TBespokeStyles]: true} &
+        AllProps<TColors, TSpacing, TBorderRadii>)[];
       return accumulator;
     }, {} as {[key in TBespokeStyles]: ({[e in TBespokeStyles]: true} & AllProps<TColors, TSpacing, TBorderRadii>)[]});
   };
