@@ -118,7 +118,7 @@ const tintColorProperties = {
   tintColor: true,
 };
 
-type RawColor = `#${string}` | `hsl(${string})` | `rgba(${string})`;
+export type RawColor = `#${string}` | `hsl(${string})` | `rgba(${string})` | `rgb(${string})`;
 
 export interface ColorProps<TColors extends string> {
   color?: TColors | RawColor;

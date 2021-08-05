@@ -215,7 +215,13 @@ export function useSafeStyle<
     functionCache ??
     (functionCache = {
       view: function (classes: (TViewsKeys | TBaseClassesKeys | ClassKey)[], debugStyle?: boolean): ViewStyle {
-        return processStyle(theme, classes, vClassCache, vStyleCache, !!debugStyle);
+        return processStyle(
+          theme,
+          theme.defaultClasses.view ? [...theme.defaultClasses.view, ...classes] : classes,
+          vClassCache,
+          vStyleCache,
+          !!debugStyle
+        );
       },
       text: function (classes: (TTextsKeys | TBaseClassesKeys | ClassKey)[], debugStyle?: boolean): TextStyle {
         return processStyle(

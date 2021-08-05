@@ -1,6 +1,6 @@
 {
   "name": "react-native-safe-style",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "A dependency-less solution to **safely** theme your react native apps.",
   "main": "dist/index.js",
   "TYPES": "dist/index.d.ts",

@@ -163,7 +163,7 @@ function useSafeStyle(theme) {
     }
     return (functionCache !== null && functionCache !== void 0 ? functionCache : (functionCache = {
         view: function (classes, debugStyle) {
-            return processStyle(theme, classes, vClassCache, vStyleCache, !!debugStyle);
+            return processStyle(theme, theme.defaultClasses.view ? __spreadArray(__spreadArray([], theme.defaultClasses.view), classes) : classes, vClassCache, vStyleCache, !!debugStyle);
         },
         text: function (classes, debugStyle) {
             return processStyle(theme, theme.defaultClasses.text ? __spreadArray(__spreadArray([], theme.defaultClasses.text), classes) : classes, tClassCache, tStyleCache, !!debugStyle);

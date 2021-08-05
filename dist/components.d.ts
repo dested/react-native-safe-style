@@ -4,8 +4,8 @@ import { SafeStyleSchema } from './index';
 export declare function makeView<T, TColors extends string, TSpacing extends string, TBorderRadii extends string, TBaseClassesKeys extends string, TViewsKeys extends string, TTextsKeys extends string>(theme: SafeStyleSchema<TColors, TSpacing, TBorderRadii, TBaseClassesKeys, TViewsKeys, TTextsKeys>, Comp: ComponentType<T>): React.ForwardRefExoticComponent<React.PropsWithoutRef<(T | (T & {
     children?: ReactNode;
 })) & { [key in TBaseClassesKeys | TViewsKeys]?: boolean | undefined; } & {
-    backgroundColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    color?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    backgroundColor?: import("./styleProps").RawColor | TColors | undefined;
+    color?: import("./styleProps").RawColor | TColors | undefined;
     opacity?: number | undefined;
     margin?: number | `%${number}` | TSpacing | undefined;
     marginTop?: number | `%${number}` | TSpacing | undefined;
@@ -75,11 +75,11 @@ export declare function makeView<T, TColors extends string, TSpacing extends str
     borderStyle?: "solid" | "dotted" | "dashed" | undefined;
     borderTopWidth?: number | undefined;
     borderWidth?: number | undefined;
-    borderColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderTopColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderRightColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderLeftColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderBottomColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    borderColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderTopColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderRightColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderLeftColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderBottomColor?: import("./styleProps").RawColor | TColors | undefined;
     borderRadius?: number | TBorderRadii | undefined;
     borderBottomLeftRadius?: number | TBorderRadii | undefined;
     borderBottomRightRadius?: number | TBorderRadii | undefined;
@@ -92,14 +92,14 @@ export declare function makeView<T, TColors extends string, TSpacing extends str
     } | undefined;
     shadowRadius?: number | undefined;
     elevation?: number | undefined;
-    shadowColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    shadowColor?: import("./styleProps").RawColor | TColors | undefined;
     textShadowOffset?: {
         width: number;
         height: number;
     } | undefined;
     textShadowRadius?: number | undefined;
-    textShadowColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    tintColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    textShadowColor?: import("./styleProps").RawColor | TColors | undefined;
+    tintColor?: import("./styleProps").RawColor | TColors | undefined;
     transform?: (import("react-native").PerpectiveTransform | import("react-native").RotateTransform | import("react-native").RotateXTransform | import("react-native").RotateYTransform | import("react-native").RotateZTransform | import("react-native").ScaleTransform | import("react-native").ScaleXTransform | import("react-native").ScaleYTransform | import("react-native").TranslateXTransform | import("react-native").TranslateYTransform | import("react-native").SkewXTransform | import("react-native").SkewYTransform | import("react-native").MatrixTransform)[] | undefined;
     transformMatrix?: number[] | undefined;
     rotation?: number | undefined;
@@ -113,8 +113,8 @@ export declare function makeView<T, TColors extends string, TSpacing extends str
 export declare function makeText<T, TColors extends string, TSpacing extends string, TBorderRadii extends string, TBaseClassesKeys extends string, TViewsKeys extends string, TTextsKeys extends string>(theme: SafeStyleSchema<TColors, TSpacing, TBorderRadii, TBaseClassesKeys, TViewsKeys, TTextsKeys>, Comp: ComponentType<T>): React.ForwardRefExoticComponent<React.PropsWithoutRef<(T | (T & {
     children?: ReactNode;
 })) & { [key in TBaseClassesKeys | TTextsKeys]?: boolean | undefined; } & {
-    backgroundColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    color?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    backgroundColor?: import("./styleProps").RawColor | TColors | undefined;
+    color?: import("./styleProps").RawColor | TColors | undefined;
     opacity?: number | undefined;
     margin?: number | `%${number}` | TSpacing | undefined;
     marginTop?: number | `%${number}` | TSpacing | undefined;
@@ -184,11 +184,11 @@ export declare function makeText<T, TColors extends string, TSpacing extends str
     borderStyle?: "solid" | "dotted" | "dashed" | undefined;
     borderTopWidth?: number | undefined;
     borderWidth?: number | undefined;
-    borderColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderTopColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderRightColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderLeftColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderBottomColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    borderColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderTopColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderRightColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderLeftColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderBottomColor?: import("./styleProps").RawColor | TColors | undefined;
     borderRadius?: number | TBorderRadii | undefined;
     borderBottomLeftRadius?: number | TBorderRadii | undefined;
     borderBottomRightRadius?: number | TBorderRadii | undefined;
@@ -201,14 +201,14 @@ export declare function makeText<T, TColors extends string, TSpacing extends str
     } | undefined;
     shadowRadius?: number | undefined;
     elevation?: number | undefined;
-    shadowColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    shadowColor?: import("./styleProps").RawColor | TColors | undefined;
     textShadowOffset?: {
         width: number;
         height: number;
     } | undefined;
     textShadowRadius?: number | undefined;
-    textShadowColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    tintColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    textShadowColor?: import("./styleProps").RawColor | TColors | undefined;
+    tintColor?: import("./styleProps").RawColor | TColors | undefined;
     transform?: (import("react-native").PerpectiveTransform | import("react-native").RotateTransform | import("react-native").RotateXTransform | import("react-native").RotateYTransform | import("react-native").RotateZTransform | import("react-native").ScaleTransform | import("react-native").ScaleXTransform | import("react-native").ScaleYTransform | import("react-native").TranslateXTransform | import("react-native").TranslateYTransform | import("react-native").SkewXTransform | import("react-native").SkewYTransform | import("react-native").MatrixTransform)[] | undefined;
     transformMatrix?: number[] | undefined;
     rotation?: number | undefined;

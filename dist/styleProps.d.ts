@@ -107,7 +107,7 @@ declare const textShadowProperties: {
 declare const tintColorProperties: {
     tintColor: boolean;
 };
-declare type RawColor = `#${string}` | `hsl(${string})` | `rgba(${string})`;
+export declare type RawColor = `#${string}` | `hsl(${string})` | `rgba(${string})` | `rgb(${string})`;
 export interface ColorProps<TColors extends string> {
     color?: TColors | RawColor;
 }

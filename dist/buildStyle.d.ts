@@ -64,11 +64,11 @@ export declare function makeUseBespokeStyle<TColors extends string, TSpacing ext
     borderTopWidth?: number | undefined;
     borderWidth?: number | undefined;
 } & {
-    borderColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderTopColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderRightColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderLeftColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
-    borderBottomColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    borderColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderTopColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderRightColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderLeftColor?: import("./styleProps").RawColor | TColors | undefined;
+    borderBottomColor?: import("./styleProps").RawColor | TColors | undefined;
 } & {
     borderRadius?: number | TBorderRadii | undefined;
     borderBottomLeftRadius?: number | TBorderRadii | undefined;
@@ -84,7 +84,7 @@ export declare function makeUseBespokeStyle<TColors extends string, TSpacing ext
     shadowRadius?: number | undefined;
     elevation?: number | undefined;
 } & {
-    shadowColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    shadowColor?: import("./styleProps").RawColor | TColors | undefined;
 } & {
     textShadowOffset?: {
         width: number;
@@ -92,6 +92,6 @@ export declare function makeUseBespokeStyle<TColors extends string, TSpacing ext
     } | undefined;
     textShadowRadius?: number | undefined;
 } & {
-    textShadowColor?: (`#${string}` | `hsl(${string})` | `rgba(${string})`) | TColors | undefined;
+    textShadowColor?: import("./styleProps").RawColor | TColors | undefined;
 } & import("./styleProps").TintColorProps<TColors> & TransformsStyle)[]; };
 export {};
